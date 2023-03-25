@@ -41,6 +41,13 @@
       "difficulty": "Hard",
       "imageUrl": "https://ddg0cip9uom1w.cloudfront.net/code-challenge/burger.jpg",
       "position": 4
+    },
+    {
+      "id": "6reace44-caf4-11ed-afa1-0242ac120002",
+      "foodName": "Lopster Burger",
+      "difficulty": "Hard",
+      "imageUrl": "https://ddg0cip9uom1w.cloudfront.net/code-challenge/burger.jpg",
+      "position": 6
     }
   ]
 }

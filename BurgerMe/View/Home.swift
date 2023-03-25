@@ -22,8 +22,7 @@ struct Home: View {
                 VStack(alignment: .leading, spacing: 20) {
                     Text("Trending Recipes")
                         .frame(alignment: .leading)
-                        .font(.largeTitle)
-                        .fontWeight(.bold)
+                        .font(.largeTitle.bold())
                                     
                     LazyVGrid(columns: columns, spacing: 20) {
                         ForEach(viewModel.foodData, id: \.self) { food in

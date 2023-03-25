@@ -6,3 +6,9 @@
 //
 
 import Foundation
+
+enum LoadJsonError: Error {
+    case CannotFind
+    case CannotLoad
+    case CannotParse
+}

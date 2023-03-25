@@ -6,15 +6,36 @@
 //
 
 import SwiftUI
+import SDWebImageSwiftUI
 
 struct FoodCardView: View {
+    
+    var food: FoodModel
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
-}
-
-struct FoodCardView_Previews: PreviewProvider {
-    static var previews: some View {
-        FoodCardView()
+        VStack(alignment: .leading, spacing: 0) {
+            AnimatedImage(url: URL(string: food.imageUrl))
+                .resizable()
+                .aspectRatio(contentMode: .fill)
+                .padding(.bottom)
+                .padding(.bottom)
+            
+            Text(food.foodName)
+                .foregroundColor(.primary)
+                .fontWeight(.medium)
+                .padding(.horizontal)
+            
+            Text(food.difficulty)
+                .foregroundColor(.secondary)
+                .fontWeight(.semibold)
+                .padding(.horizontal)
+                .padding(.bottom)
+        }
+        .clipShape(RoundedRectangle(cornerRadius: 16))
+        .overlay(
+            RoundedRectangle(cornerRadius: 16)
+                .stroke(Color.black, lineWidth: 2)
+                .padding(1)
+        )
     }
 }

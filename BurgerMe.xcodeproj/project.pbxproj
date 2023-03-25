@@ -11,6 +11,13 @@
 		3085C43229CDFDD100DB89C6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3085C43129CDFDD100DB89C6 /* ContentView.swift */; };
 		3085C43429CDFDD300DB89C6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3085C43329CDFDD300DB89C6 /* Assets.xcassets */; };
 		3085C43729CDFDD300DB89C6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3085C43629CDFDD300DB89C6 /* Preview Assets.xcassets */; };
+		3085C43E29CDFDFD00DB89C6 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3085C43D29CDFDFD00DB89C6 /* Home.swift */; };
+		3085C44229CE003700DB89C6 /* FoodCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3085C44129CE003700DB89C6 /* FoodCardView.swift */; };
+		3085C44529CE0C0F00DB89C6 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 3085C44429CE0C0F00DB89C6 /* SDWebImageSwiftUI */; };
+		30B6FE9E29CEF6BE0071EF11 /* FoodModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B6FE9D29CEF6BE0071EF11 /* FoodModel.swift */; };
+		30B6FEA029CEF7690071EF11 /* FoodViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B6FE9F29CEF7690071EF11 /* FoodViewModel.swift */; };
+		30B6FEA729CF01080071EF11 /* food_data.json in Resources */ = {isa = PBXBuildFile; fileRef = 30B6FEA629CF01080071EF11 /* food_data.json */; };
+		30B6FEA929CF02D00071EF11 /* LoadJsonError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B6FEA829CF02D00071EF11 /* LoadJsonError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +26,13 @@
 		3085C43129CDFDD100DB89C6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		3085C43329CDFDD300DB89C6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3085C43629CDFDD300DB89C6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		3085C43D29CDFDFD00DB89C6 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		3085C44129CE003700DB89C6 /* FoodCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodCardView.swift; sourceTree = "<group>"; };
+		30B6FE9D29CEF6BE0071EF11 /* FoodModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodModel.swift; sourceTree = "<group>"; };
+		30B6FE9F29CEF7690071EF11 /* FoodViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodViewModel.swift; sourceTree = "<group>"; };
+		30B6FEA629CF01080071EF11 /* food_data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = food_data.json; sourceTree = "<group>"; };
+		30B6FEA829CF02D00071EF11 /* LoadJsonError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadJsonError.swift; sourceTree = "<group>"; };
+		30B6FEAA29CF03FA0071EF11 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3085C44529CE0C0F00DB89C6 /* SDWebImageSwiftUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,6 +66,11 @@
 		3085C42E29CDFDD100DB89C6 /* BurgerMe */ = {
 			isa = PBXGroup;
 			children = (
+				30B6FEAA29CF03FA0071EF11 /* Info.plist */,
+				30B6FEA629CF01080071EF11 /* food_data.json */,
+				3085C44029CDFE2000DB89C6 /* Model */,
+				30B6FE9C29CEF6B20071EF11 /* ViewModel */,
+				3085C43F29CDFE1B00DB89C6 /* View */,
 				3085C42F29CDFDD100DB89C6 /* BurgerMeApp.swift */,
 				3085C43129CDFDD100DB89C6 /* ContentView.swift */,
 				3085C43329CDFDD300DB89C6 /* Assets.xcassets */,
@@ -65,6 +85,32 @@
 				3085C43629CDFDD300DB89C6 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		3085C43F29CDFE1B00DB89C6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3085C43D29CDFDFD00DB89C6 /* Home.swift */,
+				3085C44129CE003700DB89C6 /* FoodCardView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3085C44029CDFE2000DB89C6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				30B6FE9D29CEF6BE0071EF11 /* FoodModel.swift */,
+				30B6FEA829CF02D00071EF11 /* LoadJsonError.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		30B6FE9C29CEF6B20071EF11 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				30B6FE9F29CEF7690071EF11 /* FoodViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +129,9 @@
 			dependencies = (
 			);
 			name = BurgerMe;
+			packageProductDependencies = (
+				3085C44429CE0C0F00DB89C6 /* SDWebImageSwiftUI */,
+			);
 			productName = BurgerMe;
 			productReference = 3085C42C29CDFDD100DB89C6 /* BurgerMe.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +160,9 @@
 				Base,
 			);
 			mainGroup = 3085C42329CDFDD100DB89C6;
+			packageReferences = (
+				3085C44329CE0C0F00DB89C6 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+			);
 			productRefGroup = 3085C42D29CDFDD100DB89C6 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -125,6 +177,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30B6FEA729CF01080071EF11 /* food_data.json in Resources */,
 				3085C43729CDFDD300DB89C6 /* Preview Assets.xcassets in Resources */,
 				3085C43429CDFDD300DB89C6 /* Assets.xcassets in Resources */,
 			);
@@ -137,7 +190,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30B6FE9E29CEF6BE0071EF11 /* FoodModel.swift in Sources */,
+				30B6FEA929CF02D00071EF11 /* LoadJsonError.swift in Sources */,
 				3085C43229CDFDD100DB89C6 /* ContentView.swift in Sources */,
+				30B6FEA029CEF7690071EF11 /* FoodViewModel.swift in Sources */,
+				3085C43E29CDFDFD00DB89C6 /* Home.swift in Sources */,
+				3085C44229CE003700DB89C6 /* FoodCardView.swift in Sources */,
 				3085C43029CDFDD100DB89C6 /* BurgerMeApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -270,7 +328,7 @@
 				DEVELOPMENT_TEAM = 6W4YD5KNPW;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = BurgerMe/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -299,7 +357,7 @@
 				DEVELOPMENT_TEAM = 6W4YD5KNPW;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = BurgerMe/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -339,6 +397,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		3085C44329CE0C0F00DB89C6 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3085C44429CE0C0F00DB89C6 /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3085C44329CE0C0F00DB89C6 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 3085C42429CDFDD100DB89C6 /* Project object */;
 }

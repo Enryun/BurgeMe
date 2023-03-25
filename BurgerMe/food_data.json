@@ -1,0 +1,46 @@
+{
+  "data": [
+    {
+      "id": "d9da2eec-caf3-11ed-afa1-0242ac120002",
+      "foodName": "Chicken Burger",
+      "difficulty": "Easy",
+      "imageUrl": "https://ddg0cip9uom1w.cloudfront.net/code-challenge/burger.jpg",
+      "position": 0
+    },
+    {
+      "id": "eac58a62-caf3-11ed-afa1-0242ac120002",
+      "foodName": "Vegan Burger",
+      "difficulty": "Medium",
+      "imageUrl": "https://ddg0cip9uom1w.cloudfront.net/code-challenge/burger.jpg",
+      "position": 2
+    },
+    {
+      "id": "15efcd74-caf4-11ed-afa1-0242ac120002",
+      "foodName": "Breakfast Burger",
+      "difficulty": "Medium",
+      "imageUrl": "https://ddg0cip9uom1w.cloudfront.net/code-challenge/burger.jpg",
+      "position": 3
+    },
+    {
+      "id": "2180d098-caf4-11ed-afa1-0242ac120002",
+      "foodName": "Beef Burger",
+      "difficulty": "Easy",
+      "imageUrl": "https://ddg0cip9uom1w.cloudfront.net/code-challenge/burger.jpg",
+      "position": 1
+    },
+    {
+      "id": "4ef4b0bc-caf4-11ed-afa1-0242ac120002",
+      "foodName": "Wagu Burger",
+      "difficulty": "Hard",
+      "imageUrl": "https://ddg0cip9uom1w.cloudfront.net/code-challenge/burger.jpg",
+      "position": 5
+    },
+    {
+      "id": "660ace44-caf4-11ed-afa1-0242ac120002",
+      "foodName": "Shirmp Burger",
+      "difficulty": "Hard",
+      "imageUrl": "https://ddg0cip9uom1w.cloudfront.net/code-challenge/burger.jpg",
+      "position": 4
+    }
+  ]
+}

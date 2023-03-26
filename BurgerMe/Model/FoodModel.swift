@@ -17,6 +17,7 @@ struct FoodModel: Identifiable, Hashable, Decodable {
     var difficulty: String
     var imageUrl: String
     var position: Int
+    var isHighlight: Bool? = false
 }
 
 enum FoodDifficulty: String {

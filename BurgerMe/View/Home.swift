@@ -45,17 +45,17 @@ struct Home: View {
                         ActionSheet(
                             title: Text("Difficulty"), message: Text("You can filter recipes by difficulty"),
                             buttons: [
-                                .default(Text("Easy")) {
+                                .default(Text(FoodDifficulty.easy.rawValue)) {
                                     withAnimation {
                                         viewModel.filterByDifficulty(difficulty: .easy)
                                     }
                                 },
-                                .default(Text("Medium")) {
+                                .default(Text(FoodDifficulty.medium.rawValue)) {
                                     withAnimation {
                                         viewModel.filterByDifficulty(difficulty: .medium)
                                     }
                                 },
-                                .default(Text("Hard")) {
+                                .default(Text(FoodDifficulty.hard.rawValue)) {
                                     withAnimation {
                                         viewModel.filterByDifficulty(difficulty: .hard)
                                     }

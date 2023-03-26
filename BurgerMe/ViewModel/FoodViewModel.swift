@@ -9,25 +9,43 @@ import SwiftUI
 
 class FoodViewModel: ObservableObject {
     
-    private(set) var foodOriginalData: [FoodModel] = []
     @Published private(set) var foodData: [FoodModel] = []
     
     init() {
         do {
             let jsonData: FoodModelData = try loadJSONFromDisk("food_data.json")
-            foodOriginalData = jsonData.data
-            foodData = foodOriginalData.sorted(by: { $0.position < $1.position })
+            foodData = jsonData.data.sorted(by: { $0.position < $1.position })
         } catch {
             print(error.localizedDescription)
         }
     }
     
     func filterByDifficulty(difficulty: FoodDifficulty) {
-        foodData = foodOriginalData.filter({ FoodDifficulty(rawValue: $0.difficulty) == difficulty }).sorted(by: { $0.position < $1.position })
+        var highlightedRecipe: [FoodModel] = []
+        var notHighlightedRecipe: [FoodModel] = []
+        
+        for (index, recipe) in foodData.enumerated() {
+            if FoodDifficulty(rawValue: recipe.difficulty ) == difficulty {
+                foodData[index].isHighlight = true
+                highlightedRecipe.append(foodData[index])
+            } else {
+                foodData[index].isHighlight = false
+                notHighlightedRecipe.append(foodData[index])
+            }
+        }
+        
+        highlightedRecipe.sort(by: { $0.position < $1.position })
+        notHighlightedRecipe.sort(by: { $0.position < $1.position })
+        foodData.removeAll()
+        foodData.append(contentsOf: highlightedRecipe)
+        foodData.append(contentsOf: notHighlightedRecipe)
     }
     
     func cancelFilter() {
-        foodData = foodOriginalData.sorted(by: { $0.position < $1.position })
+        for (index, _) in foodData.enumerated() {
+            foodData[index].isHighlight = false
+        }
+        foodData.sort(by: { $0.position < $1.position })
     }
     
     private func loadJSONFromDisk<T: Decodable>(_ filename: String) throws -> T {
@@ -50,6 +68,13 @@ class FoodViewModel: ObservableObject {
         } catch {
             throw LoadJsonError.CannotParse
         }
+    }
+    
+    private func rearrange<T>(array: Array<T>, fromIndex: Int, toIndex: Int) -> Array<T>{
+        var arr = array
+        let element = arr.remove(at: fromIndex)
+        arr.insert(element, at: toIndex)
+        return arr
     }
     
 }

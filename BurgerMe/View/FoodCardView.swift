@@ -21,7 +21,7 @@ struct FoodCardView: View {
                 .padding(.bottom)
             
             Text(food.foodName)
-                .foregroundColor(.primary)
+                .foregroundColor(food.isHighlight ?? false ? .blue : .primary)
                 .fontWeight(.medium)
                 .padding(.horizontal)
             
@@ -34,7 +34,7 @@ struct FoodCardView: View {
         .clipShape(RoundedRectangle(cornerRadius: 16))
         .overlay(
             RoundedRectangle(cornerRadius: 16)
-                .stroke(Color.black, lineWidth: 2)
+                .stroke(food.isHighlight ?? false ? .blue : Color.black, lineWidth: 2)
                 .padding(1)
         )
     }

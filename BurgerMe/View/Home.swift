@@ -9,7 +9,7 @@ import SwiftUI
 
 struct Home: View {
     
-    private let viewModel = FoodViewModel()
+    @StateObject private var viewModel = FoodViewModel()
     private let columns: [GridItem] = [
         GridItem(.flexible(), spacing: 20),
         GridItem(.flexible()),
